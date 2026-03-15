@@ -1,0 +1,23 @@
+{
+  "skill_name": "remote-repo-auto-sync",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "这个目录还不是 git 仓库。帮我创建同名 GitHub 仓库，初始化本地仓库并推送到远程。",
+      "expected_output": "The agent initializes a main branch repository, creates a matching GitHub repo, connects origin, creates an initial commit with a concise message, pushes successfully, and reports status, remote, hash, and commit message.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "我刚改了 src/App.vue 和 README.md，帮我更新远程仓库。",
+      "expected_output": "The agent stages the changes, derives a concise conventional commit message from the diff, pushes to origin/main, and reports success with the new commit hash.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "把本地最新内容推到远程。如果没有改动，就直接告诉我当前仓库状态和 hash。",
+      "expected_output": "The agent detects whether there are staged or unstaged changes. If there are none, it avoids an empty commit and reports success with the current HEAD hash and a no-change message.",
+      "files": []
+    }
+  ]
+}

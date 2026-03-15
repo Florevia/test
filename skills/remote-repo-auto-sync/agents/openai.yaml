@@ -1,0 +1,4 @@
+interface:
+  display_name: "Remote Repo Auto Sync"
+  short_description: "Push local project changes to GitHub"
+  default_prompt: "Use $remote-repo-auto-sync to sync the current project to its remote repository."
